@@ -72,6 +72,10 @@
             color: black;
             border: none;
             background-color: transparent;
+            svg {
+                width: 48px;
+                height: 48px;
+            }
           }
         }
     }
@@ -112,10 +116,10 @@
             -webkit-transition-duration: 0.375s;
         }
     }
-    path:not(:only-of-type) {
-        transition-duration: 0.125s;
-        -webkit-transition-duration: 0.125s;
-    }      
+    // path:not(:only-of-type) {
+    //     transition-duration: 0.125s;
+    //     -webkit-transition-duration: 0.125s;
+    // }      
     .action{
         max-width: 400px;
         margin: 12px auto auto;

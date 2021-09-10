@@ -125,7 +125,7 @@ export const Board: React.FC = () => {
                                     onClick={() => handleMove([rowIndex, columnIndex])}
                                     disabled={(column !== undefined) || (gameState() === 'stop')}                
                                     className="square">
-                                    <SquareIcon symbol={column} stroke="custom" />
+                                    {column && <SquareIcon symbol={column} stroke="custom" />}
                                 </button>
                             </td>
                         )}

@@ -7,7 +7,7 @@ export const Background: React.FC<{
     const strokeColor = winer?.player === 'O' ? 'rgb(242, 235, 211)' : 'rgb(84, 84, 84)';
 
   return (
-    <svg className="background" style={{width: '216px'}}>
+    <svg xmlns="http://www.w3.org/2000/svg" className="background" style={{width: '216px'}}>
         <path d="M108,83L6,83"></path>
         <path d="M108,153L6,153"></path>
         <path d="M108,83L210,83"></path>
