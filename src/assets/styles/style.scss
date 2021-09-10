@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.game {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 24px;
+    .score{
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        margin-bottom: 24px;
+        max-width: 400px;
+        .player {
+            border-bottom: 2px solid transparent;
+            box-shadow: 0 4px 5px rgba(0, 0, 0,  0.16);
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            place-items: center;
+            color: rgba(0,0,0,.54);
+            font-size: 24px;
+            text-align: right;
+            border-radius: 12px;
+            transition: all 0.25s;
+            -webkit-transition: all 0.25s;
+            svg {
+                width: 20px;
+                height: 20px;
+                margin-right: 48px;
+            }
+            &.active {
+                border-bottom-color: #14bdac;
+            }
+        }
+    } 
+    .status{
+        max-width: 400px;
+        margin: auto auto 12px;
+        span {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            color: rgba(0,0,0,.54);
+            svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+            }
+        }
+    }
+    .board {
+        display: flex;
+        justify-content: center;
+        background-color: #14bdac;
+        padding: 10px 0;
+        perspective: 100px;
+        perspective: 100px;
+        position: relative;
+        z-index: 0;
+        table{
+          border-spacing: 6px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 3;
+          .square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            color: black;
+            border: none;
+            background-color: transparent;
+          }
+        }
+    }
+    .icon {
+          path {
+            fill: none;
+            stroke: black;
+            stroke-width: 16px;
+            transition: stroke-dashoffset 0.225s cubic-bezier(0.4,0,0.2,1);
+            -webkit-transition: stroke-dashoffset 0.225s cubic-bezier(0.4,0,0.2,1);
+          }
+          &.white-stroke {
+            path {
+                stroke: rgb(242, 235, 211);
+            }
+          }
+          &.grey-stroke {
+            path {
+                stroke: rgb(84, 84, 84);
+            }
+          }
+    }  
+    .background {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin: auto;
+        right: 0;
+        z-index: 0;
+        transition: opacity .5s cubic-bezier(0.4,0.0,1,1),transform .5s cubic-bezier(0.4,0.0,1,1),visibility .5s step-end;
+        -webkit-transition: opacity .5s cubic-bezier(0.4,0.0,1,1),transform .5s cubic-bezier(0.4,0.0,1,1),visibility .5s step-end;
+        path {
+            stroke: #0da192;
+            stroke-width: 8px;
+            transition-duration: 0.375s;
+            -webkit-transition-duration: 0.375s;
+        }
+    }
+    path:not(:only-of-type) {
+        transition-duration: 0.125s;
+        -webkit-transition-duration: 0.125s;
+    }      
+    .action{
+        max-width: 400px;
+        margin: 12px auto auto;
+        button {
+            cursor: pointer;
+            font-weight: bold;
+            height: 42px;
+            text-transform: uppercase;
+            margin: 0 0 8px;
+            width: 100%;
+            border: none;
+            z-index: 1;
+            border-radius: 0;
+            box-shadow: none;
+            &.reset {
+                color: #14bdac;
+            }
+            &.continue {
+                background-color: #14bdac;
+                color: #ffffff;
+            }
+        }
+    }
+}
